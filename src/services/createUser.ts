@@ -49,9 +49,9 @@ class CreateUser {
   // à modifier : désactiver l'utilisateur au lieu de le supprimer
   async deleteUser(id: string): Promise<boolean> {
     try {
-      const deletedUser = await Register.findByIdAndDelete(id);
-      // Vérifier si un utilisateur a été supprimé
-      if (deletedUser) {
+      const user = await Register.findByIdAndUpdate(id, { isActive: false });
+      // Vérifier si un utilisateur a été mis à jour
+      if (user) {
         return true;
       } else {
         return false;
