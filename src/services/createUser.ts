@@ -18,7 +18,7 @@ class CreateUser {
       lastname: "",
       genre: "",
       street: "",
-      houseNumber: "",
+      zip: "",
       city: "",
       country: "",
     };

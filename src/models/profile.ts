@@ -6,7 +6,7 @@ interface IProfile extends Document {
   lastname: string;
   genre: string;
   street: string;
-  houseNumber: string;
+  zip: string;
   city: string;
   country: string;
 }
@@ -42,7 +42,7 @@ const profileSchema = new Schema<IProfile>(
       required: false,
       unique: false,
     },
-    houseNumber: {
+    zip: {
       type: String,
       required: false,
       unique: false,
